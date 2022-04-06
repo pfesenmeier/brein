@@ -1,15 +1,15 @@
 import './App.css';
 import { Title } from './Title';
-import Button from '@mui/material/Button';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 function Recipe(props: { name: string }) {
-    return (<li>{props.name}</li>);
+    return (<ListGroup.Item>{props.name}</ListGroup.Item>);
 }
 
 function RecipeList(props: { recipes: { name: string }[] }) {
-    return (<ul>
-        {props.recipes.map(recipe => <Recipe name={recipe.name} />)}
-    </ul>);
+    return (<ListGroup>
+        {props.recipes.map(recipe => <Recipe key={recipe.name} name={recipe.name} />)}
+    </ListGroup>);
 }
 
 function App() {
@@ -18,12 +18,12 @@ function App() {
     }, {
         name: 'bar',
     }];
+
     return (
         <div className="App">
-            <Title text={'Recipes'} />
+            <Title brand={'Pckl'} links={['Recipes']} />
             <RecipeList recipes={recipes} />
-            <Button>Click me</Button>
-       </div>
+        </div>
     );
 }
 
