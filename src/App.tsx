@@ -1,10 +1,7 @@
 import './App.css';
 import { Title } from './Title';
 import ListGroup from 'react-bootstrap/ListGroup';
-
-function Recipe(props: { name: string }) {
-    return (<ListGroup.Item>{props.name}</ListGroup.Item>);
-}
+import { Recipe } from './Recipe';
 
 function RecipeList(props: { recipes: { name: string }[] }) {
     return (<ListGroup>

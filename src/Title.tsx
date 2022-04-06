@@ -4,8 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 export function Title(props: { brand: string, links: string[] }) {
 
     return (<Navbar>
-      <Navbar.Brand>{props.brand}</Navbar.Brand>
-      {props.links.map(link => <Nav.Link key={link}>{link}</Nav.Link>)}
+        <Navbar.Brand href="/">{props.brand}</Navbar.Brand>
+        {props.links.map(link => <Nav.Link key={link}>{link}</Nav.Link>)}
     </Navbar>);
 }
 

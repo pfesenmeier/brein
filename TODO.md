@@ -26,9 +26,9 @@ Breakdown
 - Tag recipes
 
 Iterations
-- Display list of recipes 
+  - [x] Display list of recipes 
+  - [ ] Display recipe
 
-- Display recipe
 
 Mark off the ingredients you have available / stashed / prepped
 
