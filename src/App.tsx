@@ -1,27 +1,22 @@
 import './App.css';
 import { Title } from './Title';
-import ListGroup from 'react-bootstrap/ListGroup';
-import { Recipe } from './Recipe';
 
-function RecipeList(props: { recipes: { name: string }[] }) {
-    return (<ListGroup>
-        {props.recipes.map(recipe => <Recipe key={recipe.name} name={recipe.name} />)}
-    </ListGroup>);
-}
+const siteBrand = 'Pickl';
+const navLinks = ['Recipes'];
+
+export const recipes = [{
+  name: 'foo',
+}, {
+  name: 'bar',
+}];
 
 function App() {
-    const recipes = [{
-        name: 'foo',
-    }, {
-        name: 'bar',
-    }];
-
-    return (
-        <div className="App">
-            <Title brand={'Pckl'} links={['Recipes']} />
-            <RecipeList recipes={recipes} />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Title brand={siteBrand} links={navLinks} />
+      <p>This is the main page</p>
+    </div>
+  );
 }
 
 export default App;
