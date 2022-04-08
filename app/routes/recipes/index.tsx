@@ -11,7 +11,6 @@ export const loader: LoaderFunction = async () => {
   }, {
     name: 'bar',
   }]);
-
 }
 
 export default function RecipeListRoute() {
