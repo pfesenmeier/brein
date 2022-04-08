@@ -20,7 +20,7 @@ export function Navbar(props: { brand: string, links: string[] }) {
           {/* Primary Navbar Items */}
           <div className="items-center space-x-1 md:flex">
             <a
-              href="/Recipes"
+              href="/recipes"
               className="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold"
             >Recipes</a
             >
