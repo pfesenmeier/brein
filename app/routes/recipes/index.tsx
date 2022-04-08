@@ -1,4 +1,4 @@
-import { RecipeList } from '../RecipeList';
+import { RecipeList } from '~/RecipeList';
 import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
@@ -19,3 +19,4 @@ export default function RecipeListRoute() {
 
   return <RecipeList recipes={recipes} />;
 }
+
