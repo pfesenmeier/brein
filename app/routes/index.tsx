@@ -2,12 +2,11 @@ import { useLoaderData } from '@remix-run/react';
 
 export async function loader() {
   const body = await fetch('http://www.as.wvu.edu/~lbrady/howto.html');
-  const res = new Response(await body.text(), {
+  return new Response(await body.text(), {
     headers: {
       "Content-Type": "text/html; charset=utf-8",
     }
   });
-  return res.text();
 }
 
 export default function Index() {
