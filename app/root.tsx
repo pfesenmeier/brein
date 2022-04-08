@@ -1,5 +1,7 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import styles from "./tailwind.css";
+import React from 'react';
+import { Navbar } from './Navbar';
 
 import {
   Links,
@@ -22,17 +24,20 @@ export const links: LinksFunction = () => [
 
 export default function App() {
   return (
-    <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+    <React.StrictMode>
+      <html lang="en">
+        <head>
+          <Meta />
+          <Links />
+        </head>
+        <body>
+          <Navbar />
+          <Outlet />
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+      </html>
+    </React.StrictMode>
   );
 }
